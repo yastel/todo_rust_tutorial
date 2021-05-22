@@ -10,7 +10,7 @@
     {% for entry in entries %}
     <div>
         <div>id: {{ entry.id }}, text: {{ entry.text }}</div>
-        <form action="">
+        <form action="/delete" method="post">
             <input type="hidden" name="id" value="{{ entry.id }}">
             <button>delete</button>
         </form>
@@ -18,9 +18,9 @@
     {% endfor %}
 </div>
 
-<form action="/add" , method="post">
+<form action="/add" method="post">
     <div>
-        <input type="text">
+        <input name="text">
     </div>
     <div>
         <button>add</button>
